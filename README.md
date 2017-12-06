@@ -22,3 +22,7 @@ If this looks good, run
 ```./tweet-deleter.py [your "tweets.csv" of tweets you want to delete]```
 
 (Make sure you have the ```docopt``` and ```tweepy``` requirements.)
+
+---
+
+Inspired by [this post](http://www.mathewinkson.com/2015/03/delete-old-tweets-selectively-using-python-and-tweepy).
