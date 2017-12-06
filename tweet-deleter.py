@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# the following is a special string with which docopt does its magic
+
 """
 
 tweet-deleter.py is a tool to delete tweets en masse.

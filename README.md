@@ -27,7 +27,8 @@ If this looks good, run
 ./tweet-deleter.py [your "tweets.csv" of tweets you want to delete]
 ```
 
-(Make sure you have the `docopt` and `tweepy` requirements.)
+(Make sure you have the `docopt` and `tweepy`
+requirements. [Docopt](http://docopt.org/) is very cool.)
 
 ---
 
