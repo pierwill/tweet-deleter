@@ -9,7 +9,7 @@ How to use
 
 Get some Twitter API credentials [here](https://apps.twitter.com/).
 
-Download your twitter archive from Twitter.com.
+Download your twitter archive from [Twitter.com](https://twitter.com/settings/account).
 
 Open "tweets.csv" and remove those tweets that you **do not** want to
 delete. Next, remove the header row. You'll end up with a nice list of
