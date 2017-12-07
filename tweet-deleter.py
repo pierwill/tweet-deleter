@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# the following is a special string with which docopt does its magic
+# this is the special string with which docopt does its magic!
 
 """
 
@@ -28,12 +28,14 @@ Examples:
 
 """
 
+# end docopt magic... for now
+
 from docopt import docopt
 import tweepy
 import csv
 from time import sleep
 
-# get credential and create api object
+# get credentials and create api object
 from secrets import consumer_key, consumer_secret, access_token, access_token_secret
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -42,17 +44,23 @@ twitter = tweepy.API(auth)
 # function that deletes tweets
 def deleter(LIST, test, verbose):
 
+    # open the file passed as an argument on the CL and make a csv object for it
     arch = open(LIST, "r")
     csvreader = csv.reader(arch)
     
+    # iterate over the lines
     for line in csvreader:
         if verbose:
             try:
-                print "Deleting " + line[0] + " from " + line[3][:10] + ": " + line[5][:50] + "..."
-            except IndexError:
+                # print tweet id and snippets of the tweet's date and text
+                print "Deleting " + line[0] + " from " + line[3][:10] + ": \"" + line[5][:50] + "...\""
+            except IndexError: # e.g., if the file is just a simple list of tweet ids
                 print "Deleting " + line[0]
         else:
             print "Deleting " + line[0]
+
+        # the actual deleting happens here
+        # this is not a test
         if not test:
             try:
                 twitter.destroy_status(line[0])
@@ -69,5 +77,5 @@ def main():
     deleter(arguments['LIST'], arguments['--test'], arguments['--verbose'])
 
 if __name__ == '__main__':
-    arguments = docopt(__doc__, version="0.1")
+    arguments = docopt(__doc__, version="0.1") # docopt magic
     main()
