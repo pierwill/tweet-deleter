@@ -15,6 +15,9 @@ Open "tweets.csv" and remove those tweets that you **do not** want to
 delete. Next, remove the header row. You'll end up with a nice list of
 unwanted tweets to pass to tweet-deleter.py.
 
+Make sure you have the `docopt` and `tweepy`
+requirements. ([Docopt](http://docopt.org/) is very cool.)
+
 Do a test run:
 
 ```
@@ -26,9 +29,6 @@ If this looks good, run
 ```
 ./tweet-deleter.py [your "tweets.csv" of tweets you want to delete]
 ```
-
-(Make sure you have the `docopt` and `tweepy`
-requirements. [Docopt](http://docopt.org/) is very cool.)
 
 ---
 
