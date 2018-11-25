@@ -2,3 +2,4 @@
 env/
 *.pyc
 test.csv
+Pipfile.lock
